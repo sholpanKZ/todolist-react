@@ -45,11 +45,53 @@ div.task svg{
     fill: #61DAFB;
 }
 
+div.task input{
+    border: 2px solid #555;
+    border-radius:5px;
+    padding: 2px 4px;
+}
+div.task.done{
+    opacity: 0.3;
+}
+div.task-name, div.task form{
+    flex-grow:1;
+}
+div.task span{
+    position:relative;
+}
+div.task span:before{
+    content:'';
+    display:block;
+    width:0;
+    height:1px;
+    background-color: #ddd;
+    position:absolute;
+    top: 10px;
+    transition: width .3s linear;
+}
+div.task.done span:before{
+    width: 100%;
+}
+
+h1, h2{
+    text-align: center;
+}
+
 div.checkbox{
     display:flex;
     align-items: center;
 }
 
+button.trash{
+    background:none;
+    border:none;
+    display:flex;
+    cursor:pointer;
+}
+button.trash svg{
+    fill: #888;
+    height: 14px;
+}
 div.task input{
     border: 2px solid #555;
     border-radius:5px;
